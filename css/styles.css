@@ -45,6 +45,30 @@ body {
   padding-right: 15px;
 }
 
+.social-list {
+  display: flex;
+  justify-content: space-between;
+}
+
+.social-list-icon {
+  fill: #afb1b8;
+}
+.social-list-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: var(--primary-background-color);
+}
+
+.social-list-link:hover,
+.social-list-link:focus {
+  color: #ffffff;
+  background: var(--accent-color);
+}
+
 /* ======== Шапка сторінки ======== */
 
 .header {
@@ -285,6 +309,8 @@ body {
 .team-border-content {
   padding-top: 30px;
   padding-bottom: 30px;
+  padding-left: 32px;
+  padding-right: 32px;
 }
 
 .work-position {
@@ -294,6 +320,7 @@ body {
   vertical-align: top;
   letter-spacing: 0.03em;
   color: #757575;
+  margin-bottom: 16px;
 }
 
 .team-group-section {
