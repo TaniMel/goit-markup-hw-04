@@ -5,6 +5,10 @@
   --primary-background-color: #f5f4fa;
   --secondary-background-color: #2f303a;
   --section-padding-gap: 94px;
+  --box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 1px 3px rgba(0, 0, 0, 0.12),
+    0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+  --box-shadow-port: 0px 1px 1px rgba(0, 0, 0, 0.12),
+    0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
 h1,
@@ -45,29 +49,21 @@ body {
   padding-right: 15px;
 }
 
-.social-list {
-  display: flex;
-  justify-content: space-between;
-}
-
-.social-list-icon {
-  fill: #afb1b8;
-}
-.social-list-link {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 44px;
-  height: 44px;
-  border-radius: 50%;
-  color: #afb1b8;
-  background-color: var(--primary-background-color);
-}
-
 .social-list-link:hover,
 .social-list-link:focus {
-  fill: #ffffff;
   background: var(--accent-color);
+}
+
+.hero-push:hover,
+.hero-push:focus,
+.modal-button:hover,
+.modal-button:focus,
+.info-footer:hover,
+.info-footer:focus,
+.info-address:hover,
+.info-address:focus {
+  background: var(--accent-color);
+  color: #ffffff;
 }
 
 /* ======== Шапка сторінки ======== */
@@ -150,6 +146,8 @@ body {
   color: #757575;
 }
 
+/* ======= END Шапка сторінки ======== */
+
 /* ========== Герой ============ */
 
 .hero-title {
@@ -194,18 +192,7 @@ body {
   border: none;
   padding: 10px 32px;
 }
-
-.hero-push:hover,
-.hero-push:focus,
-.modal-button:hover,
-.modal-button:focus,
-.info-footer:hover,
-.info-footer:focus,
-.info-address:hover,
-.info-address:focus {
-  background: var(--accent-color);
-  color: #ffffff;
-}
+/* ========= END Герой ============ */
 
 /* ======= Cильні сторони ========= */
 
@@ -271,7 +258,9 @@ body {
   color: #757575;
 }
 
-/* ====== Компетенція працівників і Співробітники ======= */
+/* ======= END Cильні сторони ========= */
+
+/* ==== Компетенція працівників і Співробітники ===== */
 
 .teamwork-section {
   padding-bottom: var(--section-padding-gap);
@@ -338,6 +327,35 @@ body {
   padding-bottom: var(--section-padding-gap);
 }
 
+.staff-team-list {
+  flex-basis: calc(100% / 4 - 30px);
+  margin-top: 30px;
+  margin-left: 30px;
+  background: #ffffff;
+  box-shadow: var(--box-shadow);
+  border-radius: 0px 0px 4px 4px;
+}
+
+.social-list {
+  display: flex;
+  justify-content: space-between;
+}
+
+.social-list-icon {
+  fill: #afb1b8;
+}
+.social-list-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  fill: #ffffff;
+}
+
+/* == END Компетенція працівників і Співробітники ==== */
+
 /* =============== Постійні клієнти ============= */
 
 .regular-customers-title {
@@ -359,8 +377,6 @@ body {
   align-items: center;
   width: 170px;
   height: 92px;
-  border-radius: 4px;
-  border: 1px solid #afb1b8;
 }
 
 .customer-list:not(:last-child) {
@@ -372,10 +388,17 @@ body {
   align-items: center;
   justify-content: center;
   padding: 16px 32px 16px 32px;
+  border: 1px solid #afb1b8;
 }
 
 .company-list-icon:hover,
 .company-list-icon:focus {
+  border: 1px solid var(--accent-color);
+  border-radius: 4px;
+}
+
+.customer-icon:hover,
+.customer-icon:focus {
   fill: var(--accent-color);
 }
 
@@ -385,6 +408,8 @@ body {
   height: 60px;
   fill: #afb1b8;
 }
+
+/* ============= END Постійні клієнти ============= */
 
 /* =========== Футер =========== */
 
@@ -485,6 +510,8 @@ body {
   background: var(--accent-color);
 }
 
+/* ===========END Футер =========== */
+
 /* ========== Портфолiо =========== */
 
 .modal-button {
@@ -527,6 +554,12 @@ body {
   margin-left: 30px;
   margin-top: 30px;
 }
+
+.catalogue:focus,
+.catalogue:hover {
+  box-shadow: var(--box-shadow-port);
+  cursor: pointer;
+}
 .card-border-content {
   border: 1px solid #eeeeee;
   border-top: none;
@@ -549,3 +582,4 @@ body {
   letter-spacing: 0.03em;
   color: #757575;
 }
+/* ==========END Портфолiо =========== */
