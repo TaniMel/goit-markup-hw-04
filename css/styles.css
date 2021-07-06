@@ -30,11 +30,12 @@ img {
 
 .list {
   list-style: none;
-  margin: auto;
+  margin: 0;
 }
 
 .link {
   text-decoration: none;
+  color: inherit;
 }
 
 body {
@@ -49,11 +50,6 @@ body {
   padding-right: 15px;
 }
 
-.social-list-link:hover,
-.social-list-link:focus {
-  background: var(--accent-color);
-}
-
 .hero-push:hover,
 .hero-push:focus,
 .modal-button:hover,
@@ -61,7 +57,9 @@ body {
 .info-footer:hover,
 .info-footer:focus,
 .info-address:hover,
-.info-address:focus {
+.info-address:focus,
+.social-list-link:hover,
+.social-list-link:focus {
   background: var(--accent-color);
   color: #ffffff;
 }
@@ -132,14 +130,6 @@ body {
   color: var(--primary-text-color);
 }
 
-/*.menu .link {
-  display: block;
-  padding: 10px;
-  border-radius: 4px;
-  text-decoration: none;
-  color: black;
-  background-color: #fff; */
-
 .menu-link:hover,
 .menu-link:focus,
 .contact-link:hover,
@@ -149,9 +139,6 @@ body {
 
 .menu-link.current {
   color: var(--accent-color);
-}
-
-.contact-list {
 }
 
 .contact-link {
@@ -359,7 +346,7 @@ body {
 }
 
 .social-list-icon {
-  fill: #afb1b8;
+  fill: currentColor;
 }
 .social-list-link {
   display: flex;
@@ -369,6 +356,7 @@ body {
   height: 44px;
   border-radius: 50%;
   fill: #ffffff;
+  color: #afb1b8;
 }
 
 /* == END Компетенція працівників і Співробітники ==== */
@@ -407,23 +395,20 @@ body {
   padding: 16px 32px 16px 32px;
   border: 1px solid #afb1b8;
   border-radius: 4px;
+  color: #afb1b8;
 }
 
 .company-list-icon:hover,
 .company-list-icon:focus {
   border: 1px solid var(--accent-color);
-}
-
-.customer-icon:hover,
-.customer-icon:focus {
-  fill: var(--accent-color);
+  color: var(--accent-color);
 }
 
 .customer-icon {
   align-items: center;
   width: 106px;
   height: 60px;
-  fill: #afb1b8;
+  fill: currentColor;
 }
 
 /* ============= END Постійні клієнти ============= */
@@ -571,12 +556,16 @@ body {
   margin-left: 30px;
   margin-top: 30px;
 }
+.catalogue-portfolio-link {
+  display: block;
+}
 
-.catalogue:focus,
-.catalogue:hover {
+.catalogue-portfolio-link:focus,
+.catalogue-portfolio-link:hover {
   box-shadow: var(--box-shadow-port);
   cursor: pointer;
 }
+
 .card-border-content {
   border: 1px solid #eeeeee;
   border-top: none;
